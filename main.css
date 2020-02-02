@@ -20,7 +20,7 @@ body{
 }
 
 section{
-  padding: 6rem;
+  padding: 6rem 0;
 }
 
 a{
@@ -38,7 +38,6 @@ img{
 }
 
 /*End Global*/
-
 
 /*start reusable*/
 .container{
@@ -64,7 +63,7 @@ img{
 }
 
 .section-heading h1::before,
-.section-heading h1::after,{
+.section-heading h1::after{
   content: '';
   position: absolute;
   bottom: -.5rem;
@@ -143,7 +142,8 @@ li{
 
 .top-nav.open{
   top: 0;
-  border-radius: inital;
+  border-bottom-left-radius: initial;
+  border-bottom-right-radius: initial;
 }
 
 .menu-toggler{
@@ -230,7 +230,7 @@ li{
   justify-content: center;
 }
 
-.about-headin{
+.about-heading{
   text-align: center;
   text-transform: uppercase;
   line-height: 0;
@@ -327,19 +327,25 @@ li{
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
-
 }
 
 .portfolio-item:last-child{
   margin-bottom: 0;
 }
 
-.portfolio-img{
+.profile-img{
   width: 50rem;
   flex: 1;
 }
 
-.portfolio.description{
+.portfolio-description{
+  flex: 1;
+}
+
+.portfolio-description h1{
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 1rem 0;
 }
 
 .portfolio-description h6{
@@ -349,25 +355,52 @@ li{
   opacity: 0.3;
 }
 
-.portfolio-description h1{
-  font-size: 3rem;
-  font-weight: 300;
-  margin: 1rem 0;
-}
-
-.portfolio-description.cta{
+.portfolio-description .cta{
   display: inline-block;
   margin-top: 2.5rem;
-  font-size: 1.50rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: #3883ff;
   transition: color 650ms;
 }
 
-.portfolio-description.cta:hover{
+.portfolio-description .cta:hover{
   color: #2f67cd;
 }
 
+.modal{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--hidden{
+  display: none;
+}
+
+.modal-contents{
+  background-color: #fd57bf;
+  padding: 2rem 4rem;
+}
+
+.modal-close-bar{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -2rem;
+  margin-top: -1rem;
+  cursor: pointer;
+}
+
+.modal-contents button{
+  width: 100%;
+  padding: .5rem;
+  background-color: #3883ff;
+  transition: all .3s ease;
+}
 /*End portfolio*/
 
 /*End timeline*/
@@ -429,6 +462,7 @@ li{
   width: 1.5rem;
   background-color: #313534;
 }
+
 /*End timeline*/
 
 /*start contact*/
@@ -490,6 +524,7 @@ input[type="submit"]:hover{
   border-radius: 100%;
   display: flex;
   animation: pulse 2s infinite;
+  cursor: pointer;
 }
 
 .up i{
@@ -517,3 +552,127 @@ input[type="submit"]:hover{
   }
 }
 /*End animation*/
+
+
+/*Media Queries*/
+@media screen and (max-width: 768px){
+  body{
+    background: url("images/sitebg2.jpg") no-repeat center fixed;
+    background-size: cover;
+  }
+
+  .landing-text h1{
+    font-size: 15rem;
+  }
+
+  .landind-text h6{
+    font-size: 1.7rem;
+  }
+
+  .nav-list{
+    flex-direction: column;
+  }
+
+  li{
+    margin: 2rem 0;
+  }
+
+  .nav-link{
+    font-size: 4.5rem;
+  }
+
+  .about-heading h1{
+    font-size: 8rem
+  }
+
+  .section-heading h1{
+    font-size: 3rem;
+  }
+
+  .about-details .nav-list{
+    flex-direction: initial;
+  }
+
+  .about-detials li{
+    margin: 0 2rem;
+  }
+
+  .icon-container{
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .icon-contrainer i{
+    font-size: 4rem;
+  }
+
+  .timeline ul{
+    margin: 0 0 0 auto;
+  }
+
+  .timeline .date::before{
+    left: -20rem
+  }
+
+  .timeline .date::after{
+    left: -5.9rem
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .menu-toggler{
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .ladning-text h1{
+    font-size: 8rem;
+  }
+
+  .landing-text h6{
+    font-size: 1.4rem;
+  }
+
+  .nav-link{
+    font-size: 3.5rem;
+  }
+
+  .about .container{
+    flex-direction: column;
+  }
+
+  .profile-img{
+    margin: 0 0 7rem 0;
+  }
+
+  .portfolio-item{
+    flex-direction: column;
+  }
+
+  .portfolio-img{
+    margin: 0 0 2rem 0;
+    order: 1;
+  }
+
+  .portfolio-description{
+    margin: 0;
+    order: 2;
+  }
+
+  .timeline p{
+    font-size: 1.6rem;
+  }
+
+  .timeline .date::before{
+    font-size: 1.3rem;
+  }
+
+  form{
+    width: 100%;
+  }
+
+  .up{
+    right: 2rem;
+  }
+}
