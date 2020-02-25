@@ -367,40 +367,6 @@ li{
 .portfolio-description .cta:hover{
   color: #2f67cd;
 }
-
-.modal{
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal--hidden{
-  display: none;
-}
-
-.modal-contents{
-  background-color: #fd57bf;
-  padding: 2rem 4rem;
-}
-
-.modal-close-bar{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: -2rem;
-  margin-top: -1rem;
-  cursor: pointer;
-}
-
-.modal-contents button{
-  width: 100%;
-  padding: .5rem;
-  background-color: #3883ff;
-  transition: all .3s ease;
-}
 /*End portfolio*/
 
 /*End timeline*/
