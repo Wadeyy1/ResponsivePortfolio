@@ -147,7 +147,7 @@ li{
 }
 
 .menu-toggler{
-  position: absolute;
+  position: fixed;
   top: 5rem;
   right: 5rem;
   width: 5rem;
@@ -521,14 +521,16 @@ input[type="submit"]:hover{
 
 
 /*Media Queries*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1000px){
   body{
     background: url("images/sitebg2.jpg") no-repeat center fixed;
     background-size: cover;
+    width: auto;
+    height: auto;
   }
 
   .landing-text h1{
-    font-size: 15rem;
+    font-size: 13rem;
   }
 
   .landind-text h6{
@@ -537,6 +539,7 @@ input[type="submit"]:hover{
 
   .nav-list{
     flex-direction: column;
+    width: auto;
   }
 
   li{
@@ -557,6 +560,7 @@ input[type="submit"]:hover{
 
   .about-details .nav-list{
     flex-direction: initial;
+    width: auto;
   }
 
   .about-detials li{
@@ -588,8 +592,14 @@ input[type="submit"]:hover{
 @media screen and (max-width: 600px) {
 
   .menu-toggler{
+    position: absolute;
     top: 2rem;
     right: 2rem;
+  }
+
+  .menu-toggler.open{
+    position: fixed;
+    transform: rotate(-45deg);
   }
 
   .ladning-text h1{
@@ -597,7 +607,7 @@ input[type="submit"]:hover{
   }
 
   .landing-text h6{
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .nav-link{
@@ -609,7 +619,8 @@ input[type="submit"]:hover{
   }
 
   .profile-img{
-    margin: 0 0 7rem 0;
+    margin: 0 0 8rem 0;
+    width: auto;
   }
 
   .portfolio-item{
@@ -620,6 +631,8 @@ input[type="submit"]:hover{
     margin: 0 0 2rem 0;
     order: 1;
   }
+
+
 
   .portfolio-description{
     margin: 0;
