@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jack Wade</title>
 
+    <link rel="icon" type="image/png" href="images\favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images\favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
@@ -121,36 +123,27 @@
           <h6>View some of my recent work</h6>
         </div>
         <div class="portfolio-item">
+          <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="900">
+            <h6>C# ASP.Net MVC</h6>
+            <h1>Bug Tracking Application</h1>
+            <p>An application that lets users track and work on bugs in a system. Built in ASP.Net following the MVC architecture, Created and followed a SRS for the project.</p>
+            <a href="https://github.com/Wadeyy1/Bug-Tracker" target="_blank" class="cta">View Code</a>
+            <a class="cta" id="ViewBugDemo">Video Demo</a>
+            <a href="images/Bug Tracker SRS.pdf" target="_blank" class="cta">View SRS</a>
+          </div>
+          <div class="portfolio-img" data-aos="fade-left" data-aos-delay="1200">
+              <img src="images/Portfolio-Thumbnail.png" alt="">
+          </div>
+        </div>
+        <div class="portfolio-item">
           <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
               <img src="images/RiskManagementSC.jpg" alt="">
           </div>
           <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
             <h6>Database Design</h6>
-            <h1>Risk Management Tool</h1>
-            <p>ASP.net web app that allows users to manage risks. SQL backend hosted on a linux VM within GCP</p>
+            <h1>Risk Management Application</h1>
+            <p>My first project I created was a Risk management (CRUD) application running on ASP.Net MVC. It has a SQL backend hosted on a linux VM within GCP</p>
             <a href="https://github.com/Wadeyy1/RiskManagementTool" target="_blank" class="cta">View Code</a>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="900">
-            <h6>C# & Java</h6>
-            <h1>Object Orientation</h1>
-            <p>Working with C# & Java to build object orientated programms, creating clean and efficient code</p>
-            <a href="#" class="cta">View details</a>
-          </div>
-          <div class="portfolio-img" data-aos="fade-left" data-aos-delay="1200">
-              <img src="images/portfolio.jpeg" alt="">
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1200">
-              <img src="images/portfolio.jpeg" alt="">
-          </div>
-          <div class="portfolio-description" data-aos="fade-left" data-aos-delay="1500">
-            <h6>Deployment</h6>
-            <h1>AWS & GCP</h1>
-            <p>AWS - EC2 systems along with GCP linux VMS & GCP App Engine</p>
-            <a class="cta" href="#">View details</a>
           </div>
         </div>
       </div>
@@ -205,13 +198,21 @@
       </div>
     </section>
 
+    <div id="BugDemoModal" class="modal">
 
+      <div class="modal-content">
+        <p>Video Demonstration <span class="close">&times;</span></p>
+        <br/>
+        <iframe src="https://player.vimeo.com/video/546941486" width="640" height="264" align="middle" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    </div>
 
     <footer class="copyright">
       <div class="up" id="up">
         <i class="fas fa-chevron-up"></i>
       </div>
-      <p>&copy; 2020 Jack Wade</p>
+      <p>&copy; 2021 Jack Wade</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
