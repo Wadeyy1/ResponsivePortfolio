@@ -260,29 +260,46 @@ li{
   font-weight: 300;
 }
 
-.down{
+.down-container {
   position: absolute;
-  width: 5rem;
-  height: 5rem;
-  background-color: #eee;
-  bottom: 10rem;
-  left: 50%;
-  border-radius: 100%;
   display: flex;
-  animation: pulse 2s infinite;
+  bottom: 50px;
+  width: 200px;
+  margin: auto;
   cursor: pointer;
+  padding-bottom: 45px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  color: #fd6bac;
 }
 
-.down i{
-  color: #16162d;
-  font-size: 2rem;
-  margin: auto;
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 /*End header*/
 
 
 /*start about*/
+.about .section-div{
+  background-color: lightslategray;
+}
+
 .about .container{
   display: flex;
   align-items: center;
