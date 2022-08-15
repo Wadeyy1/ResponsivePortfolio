@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $('#down').on('click', function() {
       $('html, body').animate({
-        scrollTop: $('#about').offset().top - 100
+        scrollTop: $('#about').offset().top 
       }, 2000);
     });
 
