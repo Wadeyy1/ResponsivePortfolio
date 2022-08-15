@@ -691,6 +691,10 @@ input[type="submit"]:hover{
     overflow-x: hidden;
   }
 
+  body {
+    background: #221e3f;
+  }
+
   .menu-toggler{
     position: absolute;
     top: 2rem;
